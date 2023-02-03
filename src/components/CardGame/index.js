@@ -1,8 +1,8 @@
 import "./style.css"
 
-function CardGame() {
+function CardGame(icon = "me", alt = "Maria") {
     return `<article class="card-game">
-        <img src="images/me.jpeg" alt="Maria">
+        <img src="images/${icon}.webp" alt="${alt}">
     </article>`
 }
 
