@@ -21,6 +21,6 @@
     transform: rotateY(180deg);
 }
 
-.card-front-back > .card.-back .card-game {
+.card-front-back > .card.-front .card-game {
     background-color: var(--color-rose);
 }
