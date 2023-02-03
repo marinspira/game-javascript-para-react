@@ -1,11 +1,9 @@
-import './style.css'
 import './src/styles/settings/colors.css'
+import './src/styles/generic/reset.css'
 import './src/styles/elements/base.css'
-
-import javascriptLogo from './javascript.svg'
-import CardGame from './src/components/CardGame'
+import BoardGame from './src/objects/BoardGame';
 
 const $root = document.querySelector("#root");
-const $htmlCardGame = CardGame()
+const $htmlBoardGame = BoardGame(9);
 
-$root.insertAdjacentHTML ('beforeend', $htmlCardGame);
+$root.insertAdjacentHTML ('beforeend', $htmlBoardGame);
