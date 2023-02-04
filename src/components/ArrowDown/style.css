@@ -6,9 +6,9 @@
 }
 
 .arrow-down[data-currentPlayer = "1"] {
-    transform: translateX(-370%)
+    transform: translateX(-250%)
 }
 
 .arrow-down[data-currentPlayer = "2"] {
-    transform: translateX(370%)
+    transform: translateX(250%)
 }
