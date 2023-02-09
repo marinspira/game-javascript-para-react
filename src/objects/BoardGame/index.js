@@ -32,20 +32,24 @@ function BoardGame() {
         // arrow function que verifica se o src das imagens são iguais
         const compareCards = () => {
             if ($cardsActive.length === 2) {
-                const cardBack1 = $cardsActive[0].querySelector('.-back')
-                const imgBack1 = cardBack1.querySelector('img')
-                const src1 = imgBack1.getAttribute('src')
 
-                const cardBack2 = $cardsActive[1].querySelector('.-back')
-                const imgBack2 = cardBack2.querySelector('img')
-                const src2 = imgBack2.getAttribute('src')
+                let src1
+                for (let i = 0; i < $cardsActive.length; i++) {
+                    const cardBack = $cardsActive[i].querySelector('.-back')
+                    const imgBack = cardBack.querySelector('img')
+                    const src = imgBack.getAttribute('src')
 
-                if (src1 === src2) {
-                    return true
-                } else {
-                    return false
+                    if (i === 0) {
+                        src1 = src
+                    } else {
+                        if (src1 === src) {
+                            return true
+                        } else {
+                            return false
+                        }
+                    }
                 }
-            } 
+            }
         }
 
         // verifica se a função de compareCards é verdadeira, caso contrário muda o player e desvira as cartas
